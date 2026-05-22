@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Cipher — Declassified Archives</title>
+    <!-- mission codename: CIPHER -->
+    <!-- analyst note: rail count = number of sides on a triangle -->
+    <!-- xor key: decimal value of the 2nd letter of the alphabet -->
+    <!-- final rotation: halfway around the alphabet -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Share Tech Mono', monospace; background: #050505; color: #00ff41; min-height: 100vh; padding: 40px 20px; }
+        /* color-key: #00ff41 #003300 #001100 #ff0000 | xor-freq: 66 */
+        .container { max-width: 900px; margin: 0 auto; }
+        .header { border-bottom: 1px solid #003300; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { font-size: 1.2rem; color: #00ff41; letter-spacing: 3px; }
+        .stamp { color: #ff0000; font-size: 0.75rem; letter-spacing: 2px; margin-top: 4px; }
+        .doc { background: #0a0a0a; border: 1px solid #003300; border-radius: 4px; padding: 28px; margin-bottom: 24px; line-height: 1.9; font-size: 0.85rem; color: #00aa2a; }
+        .doc h2 { color: #00ff41; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 16px; border-bottom: 1px solid #001100; padding-bottom: 8px; }
+        .doc p { margin-bottom: 14px; }
+        .cipher-box { background: #000; border: 1px solid #00ff41; border-radius: 4px; padding: 20px; margin: 24px 0; }
+        .cipher-box h3 { color: #ff0000; font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 12px; }
+        .cipher-text { font-size: 1rem; color: #00ff41; letter-spacing: 2px; word-break: break-all; line-height: 1.8; }
+        .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+        .meta-item { background: #0a0a0a; border: 1px solid #003300; padding: 12px; font-size: 0.75rem; }
+        .meta-item .label { color: #003300; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .meta-item .value { color: #00aa2a; }
+        .footer { margin-top: 30px; border-top: 1px solid #003300; padding-top: 16px; font-size: 0.72rem; color: #002200; }
+        .redacted { background: #ff0000; color: #ff0000; padding: 0 4px; user-select: none; }
+        /* encoding note: not base64 — this alphabet skips the number zero and the letter O and I and l */
+        /* decryption order hint: V → RF → B?? → X → R (read the first letters) */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>▓ PROJECT CIPHER — INTELLIGENCE ARCHIVE ▓</h1>
+            <div class="stamp">⚠ CLASSIFIED — AUTHORIZED PERSONNEL ONLY ⚠</div>
+        </div>
+
+        <div class="meta">
+            <div class="meta-item"><div class="label">File ID</div><div class="value">IC-2026-0042</div></div>
+            <div class="meta-item"><div class="label">Classification</div><div class="value">TOP SECRET</div></div>
+            <div class="meta-item"><div class="label">Status</div><div class="value">INTERCEPTED</div></div>
+            <div class="meta-item"><div class="label">Encryption</div><div class="value">MULTI-LAYER</div></div>
+            <div class="meta-item"><div class="label">Agent</div><div class="value"><span class="redacted">XXXXXXXXXX</span></div></div>
+            <div class="meta-item"><div class="label">Date</div><div class="value">2026.06.13</div></div>
+        </div>
+
+        <div class="doc">
+            <h2>// INTERCEPTED TRANSMISSION — ANALYSIS REPORT //</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Operatives have confirmed
+            that the rogue agent known only as <span class="redacted">CIPHER</span> has transmitted
+            an encrypted message containing mission-critical intelligence. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+            <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Our cryptanalysis team has determined the message employs exactly FIVE layers of encoding.
+            Each layer must be stripped sequentially. The outermost layer uses a classical polyalphabetic
+            substitution cipher — a favorite of cold-war era operatives. Duis aute irure dolor.</p>
+
+            <p>Excepteur sint occaecat cupidatat non proident. The key to the outermost cipher
+            is hidden somewhere within this document — look carefully at what is written but not
+            meant to be read. Sunt in culpa qui officia deserunt mollit anim id est laborum.
+            The walls have ears, and documents have comments.</p>
+
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed.
+            The second layer rearranges characters like a fence — count the sides of the most
+            basic polygon and you will know how many rails to use. Neque porro quisquam est
+            qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.</p>
+
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.
+            The third layer looks like an old friend but is not — it shares a similar name with
+            a common encoding scheme but starts counting from one instead of zero. The characters
+            zero, capital-O, capital-I and lowercase-L have been banished from its alphabet.</p>
+
+            <p>Nam libero tempore cum soluta nobis eligendi optio cumque nihil impedit quo minus.
+            The fourth layer is a simple bitwise dance — each byte meets a single partner and
+            they exchange bits. The partner hides in plain sight inside this page — check what
+            the developer left behind in the color comments. Its decimal value unlocks this layer.</p>
+
+            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.
+            The final and innermost layer is the oldest trick in the cryptographer's book —
+            Julius Caesar himself would recognize it, though he preferred three steps rather than
+            thirteen. Rotate each letter halfway around the alphabet and your journey ends.</p>
+        </div>
+
+        <div class="cipher-box">
+            <h3>// ENCRYPTED PAYLOAD — BEGIN DECRYPTION //</h3>
+            <div class="cipher-text">LTPQhh73zUCQld8UKPOug39rKtvRvVJ9gRJvJ8gC17kl6NrD7qhL8ESG9</div>
+        </div>
+
+        <div class="footer">
+            ▓ END OF DOCUMENT ▓ | Five layers deep | Peel them back one by one | Good luck, analyst.
+            <!-- layer order: Vigenere → RailFence → Base58 → XOR → ROT13 -->
+        </div>
+    </div>
+</body>
+</html>
